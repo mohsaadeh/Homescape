@@ -1,0 +1,32 @@
+body{
+  background-color: white;
+}
+.container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(19,19,19);
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  
+  p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: rgb(19,19,19);
+  }  
