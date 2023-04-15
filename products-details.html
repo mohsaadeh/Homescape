@@ -14,7 +14,7 @@
    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
    crossorigin="anonymous"></script>
    <title>HomeScape</title>
- <!-- <style>
+<style>
   header{
       background-color: #cfcfcf;
       position: relative;
@@ -203,18 +203,39 @@ grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
 
 
 
- </style> -->
+ </style> 
 </head>
 
 <body>
 
+  
+  <header>
+    <a href="#" class="brand">HomeScape</a>
+    <div class="menu">
+        <div class="btn">
+            <i class="las la-times close-btn"></i>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="products-details.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="index.html#services">Our Services </a>
+        <a href="index.html#contact">Contact</a>
+        <div class="icon-contianer">
+            <a href="login.html" class="icon-header">  <i class="lar la-user"></i> </a>
+            <a href="cart.html" class="icon-header">  <i class="las la-shopping-cart"></i>  <span>0</span></a>
+        </div>
+
+    </div>
+    <div class="btn">
+        <i class="las la-bars menu-btn"></i>
+    </div>
+</header>
 
 
-
-<nav aria-label="breadcrumb">
+<nav aria-label="breadcrumb" style="margin-top: 100px;">
   <ol class="page-nav-bar breadcrumb border mt-5 p-1 rounded container">
-    <li class="breadcrumb-item"><a class="text-decoration-none" href="#">Home</a></li>
-    <li class="breadcrumb-item"><a class="text-decoration-none" href="#">Products</a></li>
+    <li class="breadcrumb-item"><a class="text-decoration-none" href="index.html">Home</a></li>
+    <li class="breadcrumb-item"><a class="text-decoration-none" href="products.html">Products</a></li>
     <li class="breadcrumb-item active" aria-current="page">Details</li>
   </ol>
 </nav>
