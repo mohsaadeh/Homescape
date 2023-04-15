@@ -7,7 +7,11 @@
      <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
      <link rel="stylesheet" href="style/normalize.css">
    <link rel="stylesheet" href="style/stylesheet.css">
-   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+   crossorigin="anonymous"></script>
      <title>HomeScape</title>
    <style>
 
@@ -17,11 +21,12 @@
   margin: 0;
   padding: 0;
   display: grid ;
-  place-items: center
+  place-items: center;
+  gap: 2rem;
+ 
 }
 
 #sliders-container {
-  height: 300px;
   width: 95%;
   position: relative;
   overflow: hidden;
@@ -107,6 +112,13 @@
   }
 
 }
+@media only screen and (max-width: 950px) {
+
+footer{
+  margin-top: 5rem;
+}
+
+}
 
 
 
@@ -116,11 +128,12 @@ width: 100vw;
 margin: 0;
 padding: 0;
 display: grid ;
-place-items: center
+place-items: center;
+gap: 2rem;
 }
 
 #sliders-container2 {
-height: 300px;
+
 width: 95%;
 position: relative;
 overflow: hidden;
@@ -227,7 +240,7 @@ margin-top: 50px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 2rem;
     margin: 80px auto;
   }
   .card-wrap{
@@ -295,25 +308,49 @@ margin-top: 50px;
     background:linear-gradient(to left, #4faae2, #201245);
   }
 .product-container{
-  width: 100%;color: #fff;display: flex;
-    justify-content: center;
-    align-items: center;flex-direction: column;
-    height: 100vh;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  gap:2rem;
+ padding-top: 23rem;
+
 }
 .product-header{
   display: flex;justify-content: space-between;align-items: center; width: 85%;margin: 15px auto 0;padding: 0 15px;
 }
 
-.about-contaier{
-  color: #fff;margin: 20px auto;width: 80%;height: 100vh;
+.about{
+  color: black;
+height: 100vh;
+  margin-top: 15rem;
   display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-sizing: border-box;
+   
+   
+
+}
+.about img{
+  width: 20rem;
+  height: 20rem;
+}
+.about .about-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
 }
 
 .about-text{
-  width: 50%;
+  width: 50rem;
+  height: 50rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -329,11 +366,22 @@ margin-top: 50px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 }
 
 .contact-container{
-  width: 100%;display: flex;
-justify-content: space-around;align-items: center;height: 100vh;
+  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+height: 100vh;
+
+}
+.map-form{
+  display: flex;
+  justify-content: space-between;
 }
 
 .contact-card{
@@ -341,17 +389,20 @@ justify-content: space-around;align-items: center;height: 100vh;
 }
 
 @media only screen and (max-width: 950px) {
-  .services-container,.about-contaier,.product-container{
+  .services-container,.about{
     height: auto;
   }
-  .contact-container{
+  .contact-container,.map-form{
     flex-direction: column;
     height: auto;
+    gap: 2rem;
+    
   }
   .contact-card{
   width: 90%;
   margin: 0 auto;
 }
+
 }
 
 input[type=text], select, textarea {
@@ -383,11 +434,10 @@ input[type=submit]:hover {
 </head>
 <body>
 
-  
-  
-    <div id="home" class="containers" >
-        <header>
-            <a href="#" class="brand">HomeScape</a>
+
+    <div id="home" class="containers">
+        <header class="container-fluid ">
+            <a href="#" class="brand ps-2">HomeScape</a>
             <div class="menu">
                 <div class="btn">
                     <i class="las la-times close-btn"></i>
@@ -398,8 +448,8 @@ input[type=submit]:hover {
                 <a href="#services">Our Services </a>
                 <a href="#contact">Contact</a>
                 <div class="icon-contianer">
-                  <a href="login.html" class="icon-header">  <i class="lar la-user"></i> </a>
-                  <a href="cart.html" class="icon-header">  <i class="las la-shopping-cart"></i>  <span>0</span></a>
+                  <a href="login.html" class="icon-header"><i class="lar la-user"></i><a href="cart.html" class="icon-header pe-4"><i class="las la-shopping-cart "></i> <!--<span>0</span>--> </a>
+                </a>
                 </div>
        
             </div>
@@ -411,11 +461,12 @@ input[type=submit]:hover {
         </header>
 <div class="outer">
     <div class="details">
-        <h1>Hello</h1>
-        <h2>
-            <span>lorem</span>/
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptas ratione nostrum sit cum recusandae aliquid exercitationem eius dolorum explicabo adipisci temporibus iusto maxime fugiat vel pariatur consectetur, totam iure.</span>
-        </h2>
+        <h1>Welcome to HomeScape Jordan
+        </h1>
+        
+            
+            <p>your home decor and furniture store
+            </p>
     </div>
 </div>
 
@@ -426,47 +477,44 @@ input[type=submit]:hover {
 
             
     <section id="product" class="product-container">
-    <div class="product-header">
-<h1 style="color: black;">Sale</h1>
-<a href="products.html" class="btnStyle">Show All</a>
-    </div>
+   
+
+    
         <div id="sale-container">
+          <h1 style="color: black;">SALES</h1>
             <div id="sliders-container">
               <span onclick="slideRight()" class="sale-btn"></span>
                 <div id="sale-slider">
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                  <div class="sale-slide">    <img src="image/bk1.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;" src="image/living-room-g0d28a2117_640.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;"  src="image/bedroom-gf19ebc295_640.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;"  src="image/sofa.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;"  src="image/living-room-g0d28a2117_640.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;"  src="image/bedroom-gf19ebc295_640.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;"  src="image/living-room-g0d28a2117_640.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;"  src="image/bedroom-gf19ebc295_640.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;"  src="image/sofa.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;"  src="image/living-room-g0d28a2117_640.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;"  src="image/bedroom-gf19ebc295_640.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;"  src="image/sofa.jpg" alt="" width="100%"></div>
+                  <div class="sale-slide">    <img style ="height: 18rem;" src="image/living-room-g0d28a2117_640.jpg" alt="" width="100%"></div>
               </div>
               <span onclick="slideLeft()" class="sale-btn"></span>
             </div>
+            <a href="products.html" class="btnStyle">Show All</a>
           </div>
 
-
-          <div class="product-header">
-            <h1 style="color: black;">Products</h1>
-            <a href="products.html" class="btnStyle">Show All</a>
-                </div>
                     <div id="sale-container2">
+                      <h1 style="color: black;">Products</h1>
                         <div id="sliders-container2">
                           <span onclick="slideRight2()" class="sale-btn2"></span>
                             <div id="sale-slider2">
-                              <div class="sale-slide2">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                              <div class="sale-slide2">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                              <div class="sale-slide2">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                              <div class="sale-slide2">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                              <div class="sale-slide2">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                              <div class="sale-slide2">    <img src="image/bk1.jpg" alt="" width="100%"></div>
-                              <div class="sale-slide2">    <img src="image/bk1.jpg" alt="" width="100%"></div>
+                              <div class="sale-slide2">    <img src="image/product01.png" alt="" width="100%"></div>
+                              <div class="sale-slide2">    <img src="image/product02.png" alt="" width="100%"></div>
+                              <div class="sale-slide2">    <img src="image/product03.png" alt="" width="100%"></div>
+                              <div class="sale-slide2">    <img src="image/product04.png" alt="" width="100%"></div>
+                              <div class="sale-slide2">    <img src="image/product05.png" alt="" width="100%"></div>
+                              <div class="sale-slide2">    <img src="image/product06.png" alt="" width="100%"></div>
+                              <div class="sale-slide2">    <img src="image/product07.png" alt="" width="100%"></div>
                               <div class="sale-slide2">    <img src="image/bk1.jpg" alt="" width="100%"></div>
                               <div class="sale-slide2">    <img src="image/bk1.jpg" alt="" width="100%"></div>
                               <div class="sale-slide2">    <img src="image/bk1.jpg" alt="" width="100%"></div>
@@ -475,42 +523,31 @@ input[type=submit]:hover {
                           </div>
                           <span onclick="slideLeft2()" class="sale-btn2"></span>
                         </div>
+                        <a href="products.html" class="btnStyle">Show All</a>
                       </div>
     </section>
 
 
-<section id="about"  class="about-contaier">
-    <div style="color:#000;text-align: center;margin: 50px auto;">
+<section id="about"  class="about">
         <h1>About Us</h1>
-    </div>
-    <div>
-        <div style="display: flex;gap: 10px;color: #000;">
-            <div style="width: 50%;text-align: center;">
-                <div class="box-image">
-                    <img src="image/bk2.png" alt="" width="100%" style="border-radius: 20px;">
-                </div>
-                   
-               </div>
-            <div class="about-text">
-                <h1>lorem </h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ex soluta voluptatem atque consectetur placeat distinctio minus blanditiis rerum, et ea aspernatur mollitia natus saepe qui at quis eum velit?</p>
-                <a href="about.html" class="btnStyle"> ..more   </a>
-            </div>
+    
+    <div class="about-container">
+      <img src="image/bk2.png" alt="" style="border-radius: 20px;">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa aliquid itaque tenetur molestias, accusamus voluptas dicta quasi ea nemo. Enim delectus distinctio esse consequatur dolorum aliquid ratione, reprehenderit magni corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores tenetur voluptatum, molestias id unde voluptatibus exercitationem sunt nobis fuga consequatur ipsum iusto impedit? Fugit voluptas enim omnis nisi quaerat itaque!</p>
+
         </div>
-        </div>
+        <a href="about.html" class="btnStyle">Show All</a>
+
        
 </section>
      
 
 <section id="services" class="services-container">
 
-        <div class="skills-header">
+        
           <h1 style="color:black">Our Services</h1> 
-          </div>
+        
         <div class="card-project">
-  
-
-  
           <div class="card-wrap">
             <div class="card-header one">
               <img src="image/bk1.jpg" alt="" style="width: 100%;height: 100%;">
@@ -518,7 +555,7 @@ input[type=submit]:hover {
             <div class="card-content">
               <h1 class="card-title">Title</h1>
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <a href="#" class="btnStyle"> ..more   </a>
+              <a href="#" class="btnStyle"> Read More   </a>
            </div>
           </div>
    
@@ -531,7 +568,7 @@ input[type=submit]:hover {
             <div class="card-content">
               <h1 class="card-title">Title</h1>
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <a href="#" class="btnStyle"> ..more   </a>
+              <a href="#" class="btnStyle"> Read More</a>
            </div>
           </div>
    
@@ -544,7 +581,7 @@ input[type=submit]:hover {
             <div class="card-content">
               <h1 class="card-title">Title</h1>
               <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <a href="#" class="btnStyle"> ..more   </a>
+              <a href="#" class="btnStyle">Read More</a>
            </div>
           </div>
    
@@ -554,7 +591,9 @@ input[type=submit]:hover {
 
 
 <section id="contact" class="contact-container">
+  <h1>Contact Us</h1>
 
+<div class="map-form">
   <div class="contact-card">
     <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="510" id="gmap_canvas" src="https://maps.google.com/maps?q=jordan&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:510px;width:100%;}</style><a href="https://embedgooglemap.2yu.co">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:510px;width:100%;}</style></div></div>
   </div>
@@ -579,11 +618,79 @@ input[type=submit]:hover {
       <a href="#" class="btnStyle"> Submit </a>
     </form>
   </div>
+</div>
 </section>
 
-                   <footer style="height: 150px;background-color: #38ef7d;width: 100%;">
+      
+  <footer class="text-white text-center text-lg-start">
+                    <!-- Grid container -->
+                    <div class="container-fluid p-4">
+                      <!--Grid row-->
+                      <div class="row">
+                        <!--Grid column-->
+                        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                          <h5 class="text-uppercase">Footer Content</h5>
+ 
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+                            voluptatem veniam, est atque cumque eum delectus sint!
+                          </p>
+                        </div>
+                        <!--Grid column-->
 
-                   </footer>    
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                          <h5 class="text-uppercase">Links</h5>
+                                            <ul class="list-unstyled mb-0">
+                            <li class="my-2">
+                              <a href="#!" class="text-white text-decoration-none">Link 1</a>
+                            </li>
+                            <li class="my-2">
+                              <a href="#!" class="text-white text-decoration-none">Link 2</a>
+                            </li>
+                            <li class="my-2">
+                              <a href="#!" class="text-white text-decoration-none">Link 3</a>
+                            </li>
+                            <li class="my-2">
+                              <a href="#!" class="text-white text-decoration-none">Link 4</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <!--Grid column-->
+                  
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                          <h5 class="text-uppercase mb-0">Links</h5>
+                  
+                          <ul class="list-unstyled">
+                            <li class="my-2">
+                              <a href="#!" class="text-white text-decoration-none">Link 1</a>
+                            </li>
+                            <li class="my-2">
+                              <a href="#!" class="text-white text-decoration-none">Link 2</a>
+                            </li>
+                            <li class="my-2">
+                              <a href="#!" class="text-white text-decoration-none">Link 3</a>
+                            </li>
+                            <li class="my-2">
+                              <a href="#!" class="text-white text-decoration-none">Link 4</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <!--Grid column-->
+                      </div>
+                      <!--Grid row-->
+                    </div>
+                    <!-- Grid container -->
+                  
+                    <!-- Copyright -->
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                      © 2020 Copyright:
+                      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                    </div>
+                    <!-- Copyright -->
+                  </footer>
                    
 
                             <script src="js/slider.js"></script>
