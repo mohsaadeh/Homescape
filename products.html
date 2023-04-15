@@ -14,6 +14,59 @@
         background-color: #cfcfcf;
         position: relative;
     }
+    .products-container{
+        width: 90%;
+        margin: 50px auto;
+    }
+   .products-card {
+
+  color: rgb(2, 2, 2);
+  padding: 1rem;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;text-align: center;
+}
+
+.products-cards {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.products-card img {
+width: 100%;
+height: 260px;
+}
+
+.products-card p {
+font-size: 16px;
+}
+.products-card:hover{
+cursor: pointer;
+box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+input[type=text], select, textarea {
+
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.products-header{
+    display: flex;justify-content: space-between;align-items: center;margin: 30px auto;
+}
+
+@media  (max-width:680px) {
+    .products-header{
+        flex-direction: column;
+}
+}
    </style>
 </head>
 <body>
@@ -43,11 +96,153 @@
             </div>
         </header>
 
+        <div class="products-container">   
+            <div class="products-header">
+                <h1>All Products</h1>
+                <div>
+                    <label for="Filter">Filter by</label>
+                    <select id="Filter" name="Filter">
+                      <option value="australia">All Products</option>
+                      <option value="1">Category 1</option>
+                      <option value="2">Category 2</option>
+                      <option value="3">Category 3</option>
+                      <option value="4">Category 4</option>
+                      <option value="5">Category 5</option>
+                    </select>
+                    <label for="Sort">Sort by </label>
+                    <select id="Sort" name="Sort">
+                      <option value="1">Featured</option>
+                      <option value="2">Rating</option>
+                      <option value="3">Sale</option>
+                      <option value="4">Name</option>
 
+                    </select>
+                              
+                </div>
+            </div>
+        <div class="products-cards">
+            <a  href="products-details.html" class="products-card">
+             <img src="image/bk2.png" alt="Products">
+             <h3>Product Name</h3>
+             <p>$ 132.59</p>
+            </a>
+     
+            <a  href="products-details.html" class="products-card">
+                <img src="image/bk2.png" alt="Products">
+                <h3>Product Name</h3>
+                <p>$ 132.59</p>
+               </a>
 
-            <H1>Write code here</H1>
+               <a  href="products-details.html" class="products-card">
+                <img src="image/bk2.png" alt="Products">
+                <h3>Product Name</h3>
+                <p>$ 132.59</p>
+               </a>
 
+               <a  href="products-details.html" class="products-card">
+                <img src="image/bk2.png" alt="Products">
+                <h3>Product Name</h3>
+                <p>$ 132.59</p>
+               </a>
 
+               <a  href="products-details.html" class="products-card">
+                <img src="image/bk2.png" alt="Products">
+                <h3>Product Name</h3>
+                <p>$ 132.59</p>
+               </a>
+
+               <a  href="products-details.html" class="products-card">
+                <img src="image/bk2.png" alt="Products">
+                <h3>Product Name</h3>
+                <p>$ 132.59</p>
+               </a>
+        
+               <a  href="products-details.html" class="products-card">
+                   <img src="image/bk2.png" alt="Products">
+                   <h3>Product Name</h3>
+                   <p>$ 132.59</p>
+                  </a>
+   
+                  <a  href="products-details.html" class="products-card">
+                   <img src="image/bk2.png" alt="Products">
+                   <h3>Product Name</h3>
+                   <p>$ 132.59</p>
+                  </a>
+   
+                  <a  href="products-details.html" class="products-card">
+                   <img src="image/bk2.png" alt="Products">
+                   <h3>Product Name</h3>
+                   <p>$ 132.59</p>
+                  </a>
+   
+                  <a  href="products-details.html" class="products-card">
+                   <img src="image/bk2.png" alt="Products">
+                   <h3>Product Name</h3>
+                   <p>$ 132.59</p>
+                  </a>
+
+                  <a  href="products-details.html" class="products-card">
+                    <img src="image/bk2.png" alt="Products">
+                    <h3>Product Name</h3>
+                    <p>$ 132.59</p>
+                   </a>
+            
+                   <a  href="products-details.html" class="products-card">
+                       <img src="image/bk2.png" alt="Products">
+                       <h3>Product Name</h3>
+                       <p>$ 132.59</p>
+                      </a>
+       
+                      <a  href="products-details.html" class="products-card">
+                       <img src="image/bk2.png" alt="Products">
+                       <h3>Product Name</h3>
+                       <p>$ 132.59</p>
+                      </a>
+       
+                      <a  href="products-details.html" class="products-card">
+                       <img src="image/bk2.png" alt="Products">
+                       <h3>Product Name</h3>
+                       <p>$ 132.59</p>
+                      </a>
+       
+                      <a  href="products-details.html" class="products-card">
+                       <img src="image/bk2.png" alt="Products">
+                       <h3>Product Name</h3>
+                       <p>$ 132.59</p>
+                      </a>
+
+                      <a  href="products-details.html" class="products-card">
+                        <img src="image/bk2.png" alt="Products">
+                        <h3>Product Name</h3>
+                        <p>$ 132.59</p>
+                       </a>
+                
+                       <a  href="products-details.html" class="products-card">
+                           <img src="image/bk2.png" alt="Products">
+                           <h3>Product Name</h3>
+                           <p>$ 132.59</p>
+                          </a>
+           
+                          <a  href="products-details.html" class="products-card">
+                           <img src="image/bk2.png" alt="Products">
+                           <h3>Product Name</h3>
+                           <p>$ 132.59</p>
+                          </a>
+           
+                          <a  href="products-details.html" class="products-card">
+                           <img src="image/bk2.png" alt="Products">
+                           <h3>Product Name</h3>
+                           <p>$ 132.59</p>
+                          </a>
+           
+                          <a  href="products-details.html" class="products-card">
+                           <img src="image/bk2.png" alt="Products">
+                           <h3>Product Name</h3>
+                           <p>$ 132.59</p>
+                          </a>
+          </div>
+
+        </div>
   
      
 
