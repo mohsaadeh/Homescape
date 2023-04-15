@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+     <link rel="stylesheet" href="style/normalize.css">
+   <link rel="stylesheet" href="style/stylesheet.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+   crossorigin="anonymous"></script>
+     <title>HomeScape</title>
+   <style>
+     
+     header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    transition: 0.6s;
+    background: #988558;
+    
+    }
+    .sticky{
+    background: #988558;
+    padding: 15px 100px;
+    }
+    header .brand{
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    }
+    
+    header .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    } 
+    
+    
+    
+    header .menu .active{
+    right: 0;
+    }
+    header .menu a{
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 30px;
+    padding: 0 10px;
+    transition: 0.3s;
+    transition-property: color,background;
+    padding: 15px;
+    }
+    
+    header .menu a:hover{
+    border-bottom: 1px solid white;
+    
+    padding: 15px;
+    }
+    
+    header .btn{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    }
+    header .menu .icon-header{
+        color: #fff;
+        font-size: xx-large;
+        margin: 0 10px; 
+          text-decoration: none;
+           position: relative;
+           padding: 0;
+    }
+    
+    header .menu .icon-header:hover{
+        color: #C19A6B;
+       
+        padding: 0;
+    }
+    .icon-header span{
+        position: absolute;
+        top :0;
+        font-size: medium;
+        border:1px solid white;
+       
+        color:white;
+        border-radius: 50%;
+        width: 20px;
+        text-align: center;
+    
+    }
+    @media  (max-width:1060px) {
+    
+    header {
+width: 80%;
+
+}
+header .btn{
+display: block;
+color: #fff;
+}
+header .menu{
+position: fixed;
+background-color: #988558db;
+flex-direction: column;
+min-width: 244px;
+height: 100vh;
+top: 0;
+right: -100%;
+padding: 80px 50px;
+transition: 0.5s;
+transition-property: right;
+}
+
+header .menu.active{
+right: 0;
+}
+
+header .menu .close-btn{
+position: absolute;
+top: 0;
+left: 0;
+margin: 25px;
+}
+header .menu a{
+display: block;
+font-size: 20px;
+margin: 20px;
+padding: 0 15px;
+}
+
+}
+
+@media  (max-width:630px) {
+header {
+width: 86%;
+padding: 20px 30px;
+}
+
+.sticky {
+padding: 20px 30px;
+}
+}
+    .products-container{
+        width: 90%;
+        margin: 10rem auto;
+    }
+   .products-card {
+
+  color: rgb(2, 2, 2);
+  padding: 1rem;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;text-align: center;
+}
+
+.products-cards {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.products-card img {
+width: 100%;
+height: 260px;
+}
+
+.products-card p {
+font-size: 16px;
+}
+.products-card:hover{
+cursor: pointer;
+box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+input[type=text], select, textarea {
+
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.products-header{
+    display: flex;justify-content: space-between;align-items: center;margin: 30px auto;
+}
+
+@media  (max-width:680px) {
+    .products-header{
+        flex-direction: column;
+}
+}
+   </style>
+</head>
+<body>
+
+  
+    <header class="container-fluid ">
+        <a href="#" class="brand ps-2">HomeScape</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="las la-times close-btn"></i>
+            </div>
+            <a href="index.html#home">Home</a>
+            <a href="index.html#product">Products</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#services">Our Services </a>
+            <a href="index.html#contact">Contact</a>
+            <div class="icon-contianer">
+              <a href="login.html" class="icon-header"><i class="lar la-user"></i><a href="cart.html" class="icon-header pe-4"><i class="las la-shopping-cart "></i> <!--<span>0</span>--> </a>
+            </a>
+            </div>
+   
+        </div>
+
+
+        <div class="btn">
+            <i class="las la-bars menu-btn"></i>
+        </div>
+    </header>
+
+        <div class="products-container">   
+            <div class="products-header">
+                <h1>All Products</h1>
+                <div>
+                    <label for="Filter">Filter by</label>
+                    <select id="Filter" name="Filter">
+                      <option value="australia">All Products</option>
+                      <option value="1">Category 1</option>
+                      <option value="2">Category 2</option>
+                      <option value="3">Category 3</option>
+                      <option value="4">Category 4</option>
+                      <option value="5">Category 5</option>
+                    </select>
+                    <label for="Sort">Sort by </label>
+                    <select id="Sort" name="Sort">
+                      <option value="1">Featured</option>
+                      <option value="2">Rating</option>
+                      <option value="3">Sale</option>
+                      <option value="4">Name</option>
+
+                    </select>
+                              
+                </div>
+            </div>
+        <div class="products-cards">
+            <a  href="products-details.html" class="products-card">
+             <img src="image/product01.png" style=" height:12rem" alt="Products">
+             <h3>Product Name</h3>
+             <p>$ 132.59</p>
+            </a>
+     
+            <a  href="products-details.html" class="products-card">
+                <img src="image/product02.png" style=" height:12rem" alt="Products">
+                <h3>Product Name</h3>
+                <p>$ 132.59</p>
+               </a>
+
+               <a  href="products-details.html" class="products-card">
+                <img src="image/product03.png" style=" height:12rem" alt="Products">
+                <h3>Product Name</h3>
+                <p>$ 132.59</p>
+               </a>
+
+               <a  href="products-details.html" class="products-card">
+                <img src="image/product04.png" style=" height:12rem" alt="Products">
+                <h3>Product Name</h3>
+                <p>$ 132.59</p>
+               </a>
+
+               <a  href="products-details.html" class="products-card">
+                <img src="image/product05.png" style=" height:12rem" alt="Products">
+                <h3>Product Name</h3>
+                <p>$ 132.59</p>
+               </a>
+
+               <a  href="products-details.html" class="products-card">
+                <img src="image/product06.png" style=" height:12rem"alt="Products">
+                <h3>Product Name</h3>
+                <p>$ 132.59</p>
+               </a>
+        
+               <a  href="products-details.html" class="products-card">
+                   <img src="image/product07.png"style=" height:12rem" alt="Products">
+                   <h3>Product Name</h3>
+                   <p>$ 132.59</p>
+                  </a>
+   
+                  <a  href="products-details.html" class="products-card">
+                    <img src="image/product01.png" style=" height:12rem" alt="Products">
+                    <h3>Product Name</h3>
+                    <p>$ 132.59</p>
+                   </a>
+            
+                   <a  href="products-details.html" class="products-card">
+                       <img src="image/product02.png" style=" height:12rem" alt="Products">
+                       <h3>Product Name</h3>
+                       <p>$ 132.59</p>
+                      </a>
+       
+                      <a  href="products-details.html" class="products-card">
+                       <img src="image/product03.png" style=" height:12rem" alt="Products">
+                       <h3>Product Name</h3>
+                       <p>$ 132.59</p>
+                      </a>
+       
+                      <a  href="products-details.html" class="products-card">
+                       <img src="image/product04.png" style=" height:12rem" alt="Products">
+                       <h3>Product Name</h3>
+                       <p>$ 132.59</p>
+                      </a>
+       
+                      <a  href="products-details.html" class="products-card">
+                       <img src="image/product05.png" style=" height:12rem" alt="Products">
+                       <h3>Product Name</h3>
+                       <p>$ 132.59</p>
+                      </a>
+       
+                      <a  href="products-details.html" class="products-card">
+                       <img src="image/product06.png" style=" height:12rem"alt="Products">
+                       <h3>Product Name</h3>
+                       <p>$ 132.59</p>
+                      </a>
+               
+                      <a  href="products-details.html" class="products-card">
+                          <img src="image/product07.png"style=" height:12rem" alt="Products">
+                          <h3>Product Name</h3>
+                          <p>$ 132.59</p>
+                         </a>
+                         <a  href="products-details.html" class="products-card">
+                          <img src="image/product01.png" style=" height:12rem" alt="Products">
+                          <h3>Product Name</h3>
+                          <p>$ 132.59</p>
+                         </a>
+                  
+                         <a  href="products-details.html" class="products-card">
+                             <img src="image/product02.png" style=" height:12rem" alt="Products">
+                             <h3>Product Name</h3>
+                             <p>$ 132.59</p>
+                            </a>
+             
+                            <a  href="products-details.html" class="products-card">
+                             <img src="image/product03.png" style=" height:12rem" alt="Products">
+                             <h3>Product Name</h3>
+                             <p>$ 132.59</p>
+                            </a>
+             
+                            <a  href="products-details.html" class="products-card">
+                             <img src="image/product04.png" style=" height:12rem" alt="Products">
+                             <h3>Product Name</h3>
+                             <p>$ 132.59</p>
+                            </a>
+             
+                            <a  href="products-details.html" class="products-card">
+                             <img src="image/product05.png" style=" height:12rem" alt="Products">
+                             <h3>Product Name</h3>
+                             <p>$ 132.59</p>
+                            </a>
+             
+                            <a  href="products-details.html" class="products-card">
+                             <img src="image/product06.png" style=" height:12rem"alt="Products">
+                             <h3>Product Name</h3>
+                             <p>$ 132.59</p>
+                             <a  href="products-details.html" class="products-card">
+                              <img src="image/product01.png" style=" height:12rem" alt="Products">
+                              <h3>Product Name</h3>
+                              <p>$ 132.59</p>
+                             </a>
+                      
+                             <a  href="products-details.html" class="products-card">
+                                 <img src="image/product02.png" style=" height:12rem" alt="Products">
+                                 <h3>Product Name</h3>
+                                 <p>$ 132.59</p>
+                                </a>
+                 
+                                <a  href="products-details.html" class="products-card">
+                                 <img src="image/product03.png" style=" height:12rem" alt="Products">
+                                 <h3>Product Name</h3>
+                                 <p>$ 132.59</p>
+                                </a>
+                 
+                                <a  href="products-details.html" class="products-card">
+                                 <img src="image/product04.png" style=" height:12rem" alt="Products">
+                                 <h3>Product Name</h3>
+                                 <p>$ 132.59</p>
+                                </a>
+                 
+                                <a  href="products-details.html" class="products-card">
+                                 <img src="image/product05.png" style=" height:12rem" alt="Products">
+                                 <h3>Product Name</h3>
+                                 <p>$ 132.59</p>
+                                </a>
+                 
+                                <a  href="products-details.html" class="products-card">
+                                 <img src="image/product06.png" style=" height:12rem"alt="Products">
+                                 <h3>Product Name</h3>
+                                 <p>$ 132.59</p>
+                                </a>
+                         
+                                <a  href="products-details.html" class="products-card">
+                                    <img src="image/product07.png"style=" height:12rem" alt="Products">
+                                    <h3>Product Name</h3>
+                                    <p>$ 132.59</p>
+                                   </a>
+                                   <a  href="products-details.html" class="products-card">
+                                    <img src="image/product01.png" style=" height:12rem" alt="Products">
+                                    <h3>Product Name</h3>
+                                    <p>$ 132.59</p>
+                                   </a>
+                            
+                                   <a  href="products-details.html" class="products-card">
+                                       <img src="image/product02.png" style=" height:12rem" alt="Products">
+                                       <h3>Product Name</h3>
+                                       <p>$ 132.59</p>
+                                      </a>
+                       
+                                      <a  href="products-details.html" class="products-card">
+                                       <img src="image/product03.png" style=" height:12rem" alt="Products">
+                                       <h3>Product Name</h3>
+                                       <p>$ 132.59</p>
+                                      </a>
+                       
+                                      <a  href="products-details.html" class="products-card">
+                                       <img src="image/product04.png" style=" height:12rem" alt="Products">
+                                       <h3>Product Name</h3>
+                                       <p>$ 132.59</p>
+                                      </a>
+                       
+                                      <a  href="products-details.html" class="products-card">
+                                       <img src="image/product05.png" style=" height:12rem" alt="Products">
+                                       <h3>Product Name</h3>
+                                       <p>$ 132.59</p>
+                                      </a>
+                       
+                                      <a  href="products-details.html" class="products-card">
+                                       <img src="image/product06.png" style=" height:12rem"alt="Products">
+                                       <h3>Product Name</h3>
+                                       <p>$ 132.59</p>
+                                      </a>
+                               
+                                      <a  href="products-details.html" class="products-card">
+                                          <img src="image/product07.png"style=" height:12rem" alt="Products">
+                                          <h3>Product Name</h3>
+                                          <p>$ 132.59</p>
+                                         </a>
+                                         <a  href="products-details.html" class="products-card">
+                                          <img src="image/product01.png" style=" height:12rem" alt="Products">
+                                          <h3>Product Name</h3>
+                                          <p>$ 132.59</p>
+                                         </a>
+                                  
+                                         <a  href="products-details.html" class="products-card">
+                                             <img src="image/product02.png" style=" height:12rem" alt="Products">
+                                             <h3>Product Name</h3>
+                                             <p>$ 132.59</p>
+                                            </a>
+                             
+                                            <a  href="products-details.html" class="products-card">
+                                             <img src="image/product03.png" style=" height:12rem" alt="Products">
+                                             <h3>Product Name</h3>
+                                             <p>$ 132.59</p>
+                                            </a>
+                             
+                                            <a  href="products-details.html" class="products-card">
+                                             <img src="image/product04.png" style=" height:12rem" alt="Products">
+                                             <h3>Product Name</h3>
+                                             <p>$ 132.59</p>
+                                            </a>
+                             
+                                            <a  href="products-details.html" class="products-card">
+                                             <img src="image/product05.png" style=" height:12rem" alt="Products">
+                                             <h3>Product Name</h3>
+                                             <p>$ 132.59</p>
+                                            </a>
+                             
+                                            <a  href="products-details.html" class="products-card">
+                                             <img src="image/product06.png" style=" height:12rem"alt="Products">
+                                             <h3>Product Name</h3>
+                                             <p>$ 132.59</p>
+                                            </a>
+                                     
+                    
+
+          </div>
+
+        </div>
+        <footer class="text-white text-center text-lg-start">
+            <!-- Grid container -->
+            <div class="container-fluid p-4">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">HOMESCAPE</h5>
+
+                  <p>
+                    Furniture should be both functional and beautiful. It is an expression of our lives and reflects the way we live. The design of furniture should evoke emotion and be a conversation piece. It should be something that people want to touch, to feel, to experience. When we sit down in a comfortable chair, we feel the support of the design, the beauty of the curves, and the pleasure of the craftsmanship. Furniture is a part of our everyday lives, and we should celebrate its importance
+                  </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase mb-0">This Is HOMESCAPE</h5>
+          
+                  <ul class="list-unstyled">
+                    <li class="my-2">
+                      <a href="#!" class="text-white text-decoration-none">Democratic Design</a>
+                    </li>
+                    <li class="my-2">
+                      <a href="#!" class="text-white text-decoration-none">Community Engagement</a>
+                    </li>
+                    <li class="my-2">
+                      <a href="careers.html" class="text-white text-decoration-none">Careers</a>
+                    </li>
+                    <li class="my-2">
+                      <a href="#!" class="text-white text-decoration-none">Feedback</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+                
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Useful Links</h5>
+                                    <ul class="list-unstyled mb-0">
+                    <li class="my-2">
+                      <a href="#!" class="text-white text-decoration-none">HomeScape Business</a>
+                    </li>
+                    <li class="my-2">
+                      <a href="#!" class="text-white text-decoration-none">HomeScape Family</a>
+                    </li>
+                    <li class="my-2">
+                      <a href="#!" class="text-white text-decoration-none">HomeScape Stores</a>
+                    </li>
+                    <li class="my-2">
+                      <a href="#!" class="text-white text-decoration-none">HomeScape Brochures</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+          
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2020 Copyright:
+              <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+          </footer>
+
+                            <script type="text/javascript">
+                                var menu =document.querySelector('.menu');
+                                var menuBtn =document.querySelector('.menu-btn');
+                                var closeBtn =document.querySelector('.close-btn');
+                                
+                                menuBtn.addEventListener("click",() =>{
+                                    menu.classList.add('active');
+                                });
+                                
+                                closeBtn.addEventListener("click",() =>{
+                                    menu.classList.remove('active');
+                                });
+                                
+                                
+                                
+                                </script>
+</body>
+</html>

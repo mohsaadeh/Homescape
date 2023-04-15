@@ -161,7 +161,7 @@ html{
     }
     header .menu{
     position: fixed;
-    background-color: #cfcfcf;
+    background-color: #988558db;
     flex-direction: column;
     min-width: 244px;
     height: 100vh;
@@ -203,7 +203,8 @@ html{
     }
     
     
-    .btnStyle{text-decoration: none;
+    .btnStyle{
+        text-decoration: none;
         background-color: #988558db;
         
         color: #fff;
