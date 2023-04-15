@@ -90,7 +90,7 @@ header .menu .icon-header:hover{color: #000;
     text-align: center;
 
 }
-.container{
+.containers{
     /* position: absolute;
     left: 0;
     top: 0; */
@@ -118,13 +118,14 @@ header .menu .icon-header:hover{color: #000;
 }
 
 .details h1{
-    font-size: 4em;
+    font-size: 3rem;
     color: #fff;
 }
 
 .details h2{
    text-transform: capitalize;
    color: yellow;
+   font-size: 1rem;
 
 }
 

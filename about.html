@@ -4,10 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+     <link rel="stylesheet" href="style/normalize.css">
+     <link rel="stylesheet" href="style/stylesheet.css">
+     <title>HomeScape</title>
+   <style>
 
+    header{
+        background-color: #cfcfcf;
+        position: relative;
+    }
+
+    .abouts-container {
+
+    margin: 20px auto;
+    background-color:white;
+    border-radius: 10px;
+text-align: center;
+    padding: 20px;
+
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(19,19,19);
+  }
+  
+  .abouts-container img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  
+  p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: rgb(19,19,19);
+  }  
+
+  @media only screen and (max-width: 650px) {
+
+    .abouts-container img{
+width: 100%;
+}
+
+}
+   </style>
 </head>
 <body>
-    
+
+  
+  
+        <header>
+            <a href="#" class="brand">HomeScape</a>
+            <div class="menu">
+                <div class="btn">
+                    <i class="las la-times close-btn"></i>
+                </div>
+                <a href="index.html">Home</a>
+                <a href="products-details.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="index.html#services">Our Services </a>
+                <a href="contact.html">Contact</a>
+                <div class="icon-contianer">
+                    <a href="login.html" class="icon-header">  <i class="lar la-user"></i> </a>
+                    <a href="cart.html" class="icon-header">  <i class="las la-shopping-cart"></i>  <span>0</span></a>
+                </div>
+       
+            </div>
+            <div class="btn">
+                <i class="las la-bars menu-btn"></i>
+            </div>
+        </header>
+
+
+
+        <div class="abouts-container">
+            <h1>About Us</h1>
+            <img src="lam.jpg" alt="Placeholder image">
+            <h2>
+                lorem
+            </h2>
+            <p>One brand, many companies, and many, many people – that’s us in a nutshell. Spread all over the world, we have a passion for home furnishing and an inspiring shared vision: to create a better everyday life for the many people. This, together with our straightforward business idea, shared values, and a culture based on the spirit of togetherness, guides us in everything we do.</p>
+            <h2>
+                lorem
+            </h2>
+            <p>To offer a wide range of well-designed, functional home furnishing products at prices so low, that as many people as possible will be able to afford them.</p>
+            <h2>
+                lorem
+            </h2>
+            <p>Together, all over the world
+              The HOMESCAPE Brand unites thousands of co-workers and hundreds of companies with different owners around the world. The retail business is organised in a franchise system with 12 franchisees in 62 markets that – together with the franchisor and other parts of the business – continuously improve and develop the brand.</p>
+          </div>
+
+
+  
+     
+
+
+
+                            <footer >
+                                hello Footer
+                            </footer>
+
+
+                            <script type="text/javascript">
+                                var menu =document.querySelector('.menu');
+                                var menuBtn =document.querySelector('.menu-btn');
+                                var closeBtn =document.querySelector('.close-btn');
+                                
+                                menuBtn.addEventListener("click",() =>{
+                                    menu.classList.add('active');
+                                });
+                                
+                                closeBtn.addEventListener("click",() =>{
+                                    menu.classList.remove('active');
+                                });
+                                
+                                
+                                
+                                </script>
 </body>
 </html>
